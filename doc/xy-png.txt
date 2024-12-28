@@ -5,7 +5,7 @@ SYNOPSIS
   xy-png [-h <height>] [-H] [-l <length>] [-s] [-V] [-w <width>] [-z]
 
 DESCRIPTION
-  XY images are described at https://sawuare.net/xy-images.
+  XY images are described at https://husamalhomsi.net/xy-images.
 
   xy-png writes an XY image to a 1-bit grayscale, non-interlaced PNG file. The
   file has a name that encodes how it was produced. For example, a file named

@@ -5,7 +5,7 @@ SYNOPSIS
   pq-seq
 
 DESCRIPTION
-  PQ q-sequences are described at https://sawuare.net/pq-images.
+  PQ q-sequences are described at https://husamalhomsi.net/pq-images.
 
   The sequences are nonnegative integers less than 2 raised to 32, separated by
   spaces, and written to the following files:

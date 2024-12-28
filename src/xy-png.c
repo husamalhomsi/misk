@@ -93,15 +93,9 @@ int main(int argc, char *argv[]) {
     return 5;
   }
 
-  png_text texts[2] = {
-    {.key = "Author",   .text = "Sawuare", .compression = PNG_TEXT_COMPRESSION_NONE},
-    {.key = "Software", .text = "xy-png",  .compression = PNG_TEXT_COMPRESSION_NONE}
-  };
-
   png_set_compression_strategy(structp, Z_DEFAULT_STRATEGY);
   png_set_compression_level(structp, best_compression ? Z_BEST_COMPRESSION : Z_DEFAULT_COMPRESSION);
   png_set_filter(structp, PNG_FILTER_TYPE_BASE, PNG_FILTER_NONE);
-  png_set_text(structp, infop, texts, 2);
   png_set_IHDR(structp, infop, width, height, 1, PNG_COLOR_TYPE_GRAY, PNG_INTERLACE_NONE,
     PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
 

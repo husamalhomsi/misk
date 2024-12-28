@@ -22,4 +22,4 @@ SYNOPSIS
   void (*pq_painters[50])(void);
 
 DESCRIPTION
-  PQ images are described at https://sawuare.net/pq-images.
+  PQ images are described at https://husamalhomsi.net/pq-images.

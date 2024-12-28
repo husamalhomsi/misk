@@ -6,7 +6,7 @@ SYNOPSIS
          [-q <q-argument>] [-w <width>] [-x <x-offset>] [-y <y-offset>] [-z]
 
 DESCRIPTION
-  PQ images are described at https://sawuare.net/pq-images.
+  PQ images are described at https://husamalhomsi.net/pq-images.
 
   pq-png writes a PQ image to a 1-bit grayscale, non-interlaced PNG file. The
   file has a name that encodes how it was produced. For example, a file named

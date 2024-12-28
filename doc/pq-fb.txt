@@ -6,7 +6,7 @@ SYNOPSIS
         [-x <x-offset>] [-y <y-offset>]
 
 DESCRIPTION
-  PQ images are described at https://sawuare.net/pq-images.
+  PQ images are described at https://husamalhomsi.net/pq-images.
 
   pq-fb requires permission to read and write the Linux framebuffer device
   /dev/fb0, which likely requires being the superuser or being in the video
