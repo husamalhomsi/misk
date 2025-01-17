@@ -7,4 +7,4 @@ SYNOPSIS
   TCEM(p)
 
 SEE ALSO
-  ecma48.txt
+  ecma-48.txt

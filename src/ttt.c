@@ -4,7 +4,7 @@
 #include <termios.h>
 #include <unistd.h>
 
-#include "ecma48.h"
+#include "ecma-48.h"
 #include "tcem.h"
 
 #define GRID_ROWS 3
@@ -48,7 +48,7 @@ int main(void) {
     return 2;
 
   setbuf(stdout, 0);
-  fputs(TCEM("l") ECMA48_ED("1") ECMA48_CUP(), stdout);
+  fputs(TCEM("l") ECMA_48_ED("1") ECMA_48_CUP(), stdout);
 
   // Print the grid
   for (int row = 0; row < GRID_ROWS; ++row) {
@@ -78,7 +78,7 @@ int main(void) {
 
   // Play
   while (1) {
-    printf(ECMA48_CUP("7") "Player: %c", player);
+    printf(ECMA_48_CUP("7") "Player: %c", player);
 
     while (1) {
       c = getchar();
@@ -94,7 +94,7 @@ int main(void) {
       }
     }
 
-    printf(ECMA48_CUP("%d;%d") ECMA48_SGR("%d") "%c" ECMA48_SGR(),
+    printf(ECMA_48_CUP("%d;%d") ECMA_48_SGR("%d") "%c" ECMA_48_SGR(),
       c / GRID_COLS * 2 + 1,
       c % GRID_COLS * 2 + 1,
       player == 'X' ? RED_DISPLAY : GREEN_DISPLAY,
@@ -104,20 +104,20 @@ int main(void) {
 
     if (++plays >= 5) {
       do if ((grid[magic[c][0]] & grid[magic[c][1]] & grid[magic[c][2]]) == player) {
-        printf(ECMA48_SGR("%d"), player == 'X' ? RED_BACKGROUND : GREEN_BACKGROUND);
+        printf(ECMA_48_SGR("%d"), player == 'X' ? RED_BACKGROUND : GREEN_BACKGROUND);
 
         for (int i = 0; i < 3; ++i)
-          printf(ECMA48_CUP("%d;%d") "%c",
+          printf(ECMA_48_CUP("%d;%d") "%c",
             magic[c][i] / GRID_COLS * 2 + 1,
             magic[c][i] % GRID_COLS * 2 + 1,
             player);
 
-        printf(ECMA48_SGR() ECMA48_CUP("7") ECMA48_EL() "Winner: %c", player);
+        printf(ECMA_48_SGR() ECMA_48_CUP("7") ECMA_48_EL() "Winner: %c", player);
         goto exit;
       } while ((magic[c] += 3)[0]);
 
       if (plays == GRID_AREA) {
-        fputs(ECMA48_CUP("7") "Winner: none", stdout);
+        fputs(ECMA_48_CUP("7") "Winner: none", stdout);
         goto exit;
       }
     }

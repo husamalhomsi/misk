@@ -10,7 +10,7 @@ The programs and libraries in here are:
   eca-txt - print an elementary cellular automaton
   eca-wav - write an audio elementary cellular automaton to a WAVE file
   eca.h - library for elementary cellular automata
-  ecma48.h - control functions for coded character sets in 7-bit codes
+  ecma-48.h - control functions for coded character sets in 7-bit codes
   getlocale - print the current locale
   limits - print every standard limit in <limits.h>
   midi - print a table of MIDI note number, notation, and frequency

@@ -5,7 +5,7 @@
 #include <sys/ioctl.h>
 #include <unistd.h>
 
-#include "ecma48.h"
+#include "ecma-48.h"
 
 // Full angle in radians
 #define TAU 6.28318530717958647692
@@ -20,7 +20,7 @@ int main(void) {
 
   --winsz.ws_row;
 
-  fputs(ECMA48_ED("1"), stdout);
+  fputs(ECMA_48_ED("1"), stdout);
 
   for (int bow = 6; bow >= 1; --bow) {
     int last_col = winsz.ws_col - bow + 1;
@@ -29,11 +29,11 @@ int main(void) {
     int color = sgr_colors[bow - 1];
 
     for (int col = bow; col <= last_col; ++col)
-      printf(ECMA48_CUP("%d;%d") ECMA48_SGR("%d") "\u2588", // FULL BLOCK
+      printf(ECMA_48_CUP("%d;%d") ECMA_48_SGR("%d") "\u2588", // FULL BLOCK
         winsz.ws_row - (int) round(sin(TAU / 2 * (col - bow) / width) * peak_row),
         col,
         color);
   }
 
-  fputs(ECMA48_SGR(), stdout);
+  fputs(ECMA_48_SGR(), stdout);
 }

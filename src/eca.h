@@ -6,7 +6,7 @@
 #define RAND_MSB 31
 
 #define RULE(number, formula)                                       \
-  static inline _Bool eca_rule##number(_Bool p, _Bool q, _Bool r) { \
+  static inline _Bool eca_rule_##number(_Bool p, _Bool q, _Bool r) { \
     return formula;                                                 \
   }
 
@@ -279,7 +279,7 @@ static uint32_t eca_rand(void) {
   uint32_t accumulator = 0;
 
   for (int b = RAND_LSB; b <= RAND_MSB; ++b)
-    accumulator |= (uint32_t) eca_rule30(
+    accumulator |= (uint32_t) eca_rule_30(
       (uint32_t) 1 << (b == RAND_MSB ? RAND_LSB : b + 1) & eca_next,
       (uint32_t) 1 <<                             b      & eca_next,
       (uint32_t) 1 << (b == RAND_LSB ? RAND_MSB : b - 1) & eca_next) << b;

@@ -12,7 +12,7 @@
 #include <termios.h>
 #include <unistd.h>
 
-#include "ecma48.h"
+#include "ecma-48.h"
 #include "pq.h"
 #include "tcem.h"
 
@@ -94,7 +94,7 @@ int main(int argc, char *argv[]) {
     return 7;
 
   setbuf(stdout, 0);
-  fputs(TCEM("l") ECMA48_ED("1") ECMA48_CUP(), stdout);
+  fputs(TCEM("l") ECMA_48_ED("1") ECMA_48_CUP(), stdout);
 
   while (1) {
     _Bool warn;
@@ -197,7 +197,7 @@ get:
 exit:
   free(pq_canvas);
   munmap(fb_map, fscreeninfo.smem_len);
-  fputs(TCEM("h") ECMA48_ED("3"), stdout);
+  fputs(TCEM("h") ECMA_48_ED("3"), stdout);
 
   if (tcsetattr(STDIN_FILENO, TCSANOW, &old_term) == -1)
     return 7;
