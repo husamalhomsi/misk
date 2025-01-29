@@ -66,10 +66,10 @@ int main(int argc, char *argv[]) {
     return 3;
 
   // The longest filename is
-  // p10q1000000000x1000000000y1000000000w10000h10000.pq.png
+  // p10q1000000000w10000h10000x1000000000y1000000000.pq.png
   char filename[56];
-  sprintf(filename, "p%" PRIu32 "q%" PRIu32 "x%" PRIu32 "y%" PRIu32 "w%" PRIu32 "h%" PRIu32 ".pq.png",
-    pq_id, pq_q, pq_x0, pq_y0, pq_width, pq_height);
+  sprintf(filename, "p%" PRIu32 "q%" PRIu32 "w%" PRIu32 "h%" PRIu32 "x%" PRIu32 "y%" PRIu32 ".pq.png",
+    pq_id, pq_q, pq_width, pq_height, pq_x0, pq_y0);
 
   FILE *file = fopen(filename, "wb");
 

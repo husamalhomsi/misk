@@ -6,10 +6,10 @@ SYNOPSIS
 
   uint32_t pq_id     = 0;
   uint32_t pq_q      = 1;
-  uint32_t pq_x0     = 0;
-  uint32_t pq_y0     = 0;
   uint32_t pq_width  = 256,
   uint32_t pq_height = 256;
+  uint32_t pq_x0     = 0;
+  uint32_t pq_y0     = 0;
 
   _Bool *pq_canvas;
 

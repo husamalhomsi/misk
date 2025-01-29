@@ -17,10 +17,10 @@
 
 static uint32_t pq_id     = 0;
 static uint32_t pq_q      = 1;
-static uint32_t pq_x0     = 0;
-static uint32_t pq_y0     = 0;
 static uint32_t pq_width  = 256;
 static uint32_t pq_height = 256;
+static uint32_t pq_x0     = 0;
+static uint32_t pq_y0     = 0;
 
 static _Bool *pq_canvas;
 

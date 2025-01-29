@@ -10,9 +10,9 @@ DESCRIPTION
 
   pq-png writes a PQ image to a 1-bit grayscale, non-interlaced PNG file. The
   file has a name that encodes how it was produced. For example, a file named
-  p0q1x0y0w256h256.pq.png can be reproduced by an invocation equivalent to
+  p0q1w256h256x0y0.pq.png can be reproduced by an invocation equivalent to
 
-    pq-png -p 0 -q 1 -x 0 -y 0 -w 256 -h 256
+    pq-png -p 0 -q 1 -w 256 -h 256 -x 0 -y 0
 
 OPTIONS
   -h <height>
