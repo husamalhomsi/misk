@@ -8,7 +8,7 @@ The programs and libraries in here are:
   ctime - print the local time in the form Www Mmm dd hh:mm:ss yyyy
   eca-png - write an elementary cellular automaton to a PNG file
   eca-txt - print an elementary cellular automaton
-  eca-wav - write an audio elementary cellular automaton to a WAVE file
+  eca-wav - write an elementary cellular automaton as audio to a WAVE file
   eca.h - library for elementary cellular automata
   ecma-48.h - control functions for coded character sets in 7-bit codes
   getlocale - print the current locale

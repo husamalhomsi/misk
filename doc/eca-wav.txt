@@ -1,5 +1,5 @@
 NAME
-  eca-wav - write an audio elementary cellular automaton to a WAVE file
+  eca-wav - write an elementary cellular automaton as audio to a WAVE file
 
 SYNOPSIS
   eca-wav [-c <cells>] [-g <generations>] [-r <rule>] [-s <seed>]
