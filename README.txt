@@ -17,7 +17,7 @@ The programs and libraries in here are:
   morse     - print arguments as Morse code
   pq-fb     - display PQ images on the Linux framebuffer device
   pq-png    - write a PQ image to a PNG file
-  pq-seq    - write some PQ q-sequences
+  pq-seq    - write PQ q-sequences to text files
   pq.h      - library for PQ images
   printable - print a table of printable ASCII characters and their codes
   rainbow   - print a sine-shaped 6-color rainbow

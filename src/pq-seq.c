@@ -1,4 +1,4 @@
-// pq-seq.c - write some PQ q-sequences
+// pq-seq.c - write PQ q-sequences to text files
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,5 +1,5 @@
 NAME
-  pq-seq - write some PQ q-sequences
+  pq-seq - write PQ q-sequences to text files
 
 SYNOPSIS
   pq-seq
