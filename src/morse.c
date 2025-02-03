@@ -1,4 +1,4 @@
-// morse.c - encode arguments into printable adapted International Morse code
+// morse.c - print arguments as Morse code
 
 #include <stdio.h>
 

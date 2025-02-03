@@ -1,5 +1,5 @@
 NAME
-  morse - encode arguments into printable adapted International Morse code
+  morse - print arguments as Morse code
 
 SYNOPSIS
   morse <word>...

@@ -14,7 +14,7 @@ The programs and libraries in here are:
   getlocale - print the current locale
   limits - print every standard limit in <limits.h>
   midi - print a table of MIDI note number, notation, and frequency
-  morse - encode arguments into printable adapted International Morse code
+  morse - print arguments as Morse code
   pq-fb - display PQ images on the Linux framebuffer device
   pq-png - write a PQ image to a PNG file
   pq-seq - write some PQ q-sequences
