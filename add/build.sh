@@ -2,13 +2,13 @@
 
 # build.sh - build programs and put programs and libraries in /usr/local/
 
-# Requires permission to write and execute /usr/local/bin/ and
+# This script requires permission to write and run /usr/local/bin/ and
 # /usr/local/include/, which likely requires being the superuser.
 #
 # All programs depend on the C compiler cc, which may be a link to GCC or Clang.
 # Some programs that write PNG files depend on the C libraries libpng and zlib.
 #
-# To install the dependencies on Debian or a derivative of it, execute
+# To install the dependencies on Debian or a derivative of it, run
 #
 #   apt install clang libpng16-16 libpng-dev zlib1g zlib1g-dev
 

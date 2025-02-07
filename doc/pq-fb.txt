@@ -12,9 +12,9 @@ DESCRIPTION
   /dev/fb0, which likely requires being the superuser or being in the video
   group.
 
-  pq-fb should be executed in a Linux virtual terminal (i.e. TERM=linux).
+  pq-fb should be run in a Linux virtual terminal (i.e. TERM=linux).
 
-  The following keys can be used to control pq-fb during execution:
+  The following keys can be used to control pq-fb while it is running:
 
     1 decrements the ID;
     2 increments the ID;

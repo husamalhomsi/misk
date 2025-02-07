@@ -2,7 +2,7 @@
 
 # output.sh - put the output of some programs in ../out/
 
-# Assumes that build.sh has been executed.
+# This script assumes that build.sh has been run.
 
 set -e
 
