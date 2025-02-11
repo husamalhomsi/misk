@@ -2,8 +2,8 @@ NAME
   pq-fb - display PQ images on the Linux framebuffer device
 
 SYNOPSIS
-  pq-fb [-l] [-o <offset>] [-p <ID>] [-q <q-argument>] [-s <step>]
-        [-x <x-offset>] [-y <y-offset>]
+  pq-fb [-l] [-o <offset>] [-p <ID>] [-q <q-value>] [-s <step>] [-x <x-offset>]
+        [-y <y-offset>]
 
 DESCRIPTION
   PQ images are described at https://husamalhomsi.net/pq-images.
@@ -18,24 +18,24 @@ DESCRIPTION
 
     1 decrements the ID;
     2 increments the ID;
-    3 decrements the q-argument;
-    4 increments the q-argument;
+    3 decrements the q-value;
+    4 increments the q-value;
     5 decrements the x-offset;
     6 increments the x-offset;
     7 decrements the y-offset;
     8 increments the y-offset;
     p sets the ID to what is entered next (like -p and its argument);
-    q sets the q-argument to what is entered next (like -q and its argument);
+    q sets the q-value to what is entered next (like -q and its argument);
     x sets the x-offset to what is entered next (like -x and its argument);
     y sets the y-offset to what is entered next (like -y and its argument);
-    d doubles the q-argument;
+    d doubles the q-value;
     g draws a grid of lines whose spacing is entered next;
     l toggles the status line;
     m places the origin in the middle of the image by setting the offsets;
     e exits;
 
-  The status line shows the ID, q-argument, x-offset, and y-offset. If the ID or
-  q-argument are undefined, the status line is printed with " !" appended.
+  The status line shows the ID, q-value, x-offset, and y-offset. If the ID or
+  q-value are undefined, the status line is printed with " !" appended.
 
 OPTIONS
   -l
@@ -48,8 +48,8 @@ OPTIONS
     The nonnegative integer <ID> specifies the painter's ID.
     Defaults to 0. Must be less than 50.
 
-  -q <q-argument>
-    The nonnegative integer <q-argument> specifies the painter's q-argument.
+  -q <q-value>
+    The nonnegative integer <q-value> specifies the painter's q-value.
     Defaults to 1. Must be less than 4294967296.
 
   -s <step>

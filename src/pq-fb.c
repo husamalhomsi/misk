@@ -154,7 +154,7 @@ get:
       case 'y': scanf("%" PRIu32, &pq_y0);
         break;
 
-      // Double the q-argument
+      // Double the q-value
       case 'd': pq_q *= 2;
         break;
 

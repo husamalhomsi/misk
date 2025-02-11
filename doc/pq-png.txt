@@ -2,8 +2,8 @@ NAME
   pq-png - write a PQ image to a PNG file
 
 SYNOPSIS
-  pq-png [-h <height>] [-l <length>] [-m] [-o <offset>] [-p <ID>]
-         [-q <q-argument>] [-w <width>] [-x <x-offset>] [-y <y-offset>] [-z]
+  pq-png [-h <height>] [-l <length>] [-m] [-o <offset>] [-p <ID>] [-q <q-value>]
+         [-w <width>] [-x <x-offset>] [-y <y-offset>] [-z]
 
 DESCRIPTION
   PQ images are described at https://husamalhomsi.net/pq-images.
@@ -34,8 +34,8 @@ OPTIONS
     The nonnegative integer <ID> specifies the painter's ID.
     Defaults to 0. Must be less than 50.
 
-  -q <q-argument>
-    The nonnegative integer <q-argument> specifies the painter's q-argument.
+  -q <q-value>
+    The nonnegative integer <q-value> specifies the painter's q-value.
     Defaults to 1. Must be less than 4294967296.
 
   -w <width>
