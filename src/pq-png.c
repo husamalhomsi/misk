@@ -102,10 +102,10 @@ int main(int argc, char *argv[]) {
   for (uint32_t y = 0; y < pq_height; ++y) {
     for (uint32_t x = 0; x < pq_width; ++x) {
       if (!(x % 8))
-        row[x / 8] = 0;
+        row[x / 8] = 255;
 
       if (!pq_canvas[y * pq_width + x])
-        row[x / 8] |= 1 << (7 - x % 8);
+        row[x / 8] ^= 1 << (7 - x % 8);
     }
 
     png_write_row(structp, row);

@@ -105,10 +105,10 @@ int main(int argc, char *argv[]) {
   for (uint32_t g = 0; g < gen_count; ++g) {
     for (uint32_t c = 0; c < cell_count; ++c) {
       if (!(c % 8))
-        row[c / 8] = 0;
+        row[c / 8] = 255;
 
       if (cells[c])
-        row[c / 8] |= 1 << (7 - c % 8);
+        row[c / 8] ^= 1 << (7 - c % 8);
 
       accumulators[c] = eca_rule(rule,
         cells[c == 0 ? last_cell_position : c - 1],

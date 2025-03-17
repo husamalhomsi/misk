@@ -21,7 +21,7 @@ static unsigned height = 256;
 static void flood(png_byte image[], unsigned x, unsigned y) {
   unsigned long i = y * width + x;
 
-  if (x >= width || y >= height || image[i] != WHITE)
+  if (x >= width || y >= height || image[i] != BLACK)
     return;
 
   image[i] = FILLER;
@@ -110,40 +110,40 @@ int main(int argc, char *argv[]) {
   unsigned longer  = width > height ? width : height;
 
   for (unsigned long i = 0; i < area; ++i)
-    image[i] = BLACK;
+    image[i] = WHITE;
 
   for (unsigned i = 0; i < shorter; ++i)
     for (unsigned j = i; j < longer; ++j)
-      image[i * j] = WHITE;
+      image[i * j] = BLACK;
 
   if (stalactites) {
     flood(image, 0, 0);
 
     for (unsigned long i = 0; i < area; ++i)
-      if (image[i] == WHITE)
-        image[i] = BLACK;
+      if (image[i] == BLACK)
+        image[i] = WHITE;
   }
   else if (horizontal_projection)
     for (unsigned x = 0; x < width; ++x) {
       unsigned colored = 0;
 
       for (unsigned y = 0; y < height; ++y)
-        if (image[y * width + x] == WHITE)
-          image[colored++ * width + x] = WHITE;
+        if (image[y * width + x] == BLACK)
+          image[colored++ * width + x] = BLACK;
 
       for (unsigned y = colored; y < height; ++y)
-        image[y * width + x] = BLACK;
+        image[y * width + x] = WHITE;
     }
   else if (vertical_projection)
     for (unsigned y = 0; y < height; ++y) {
       unsigned colored = 0;
 
       for (unsigned x = 0; x < width; ++x)
-        if (image[y * width + x] == WHITE)
-          image[y * width + colored++] = WHITE;
+        if (image[y * width + x] == BLACK)
+          image[y * width + colored++] = BLACK;
 
       for (unsigned x = colored; x < width; ++x)
-        image[y * width + x] = BLACK;
+        image[y * width + x] = WHITE;
     }
 
   png_init_io(structp, file);
@@ -154,10 +154,10 @@ int main(int argc, char *argv[]) {
       png_byte pixel = image[y * width + x];
 
       if (!(x % 8))
-        image[x / 8] = 0;
+        image[x / 8] = 255;
 
-      if (pixel)
-        image[x / 8] |= 1 << (7 - x % 8);
+      if (pixel != WHITE)
+        image[x / 8] ^= 1 << (7 - x % 8);
     }
 
     png_write_row(structp, image);

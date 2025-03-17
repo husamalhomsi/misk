@@ -104,7 +104,7 @@ int main(int argc, char *argv[]) {
       pq_painters[pq_id]();
 
       for (size_t i = 0; i < area; ++i)
-        fb_map[i] = pq_canvas[i] ? BLACK : WHITE;
+        fb_map[i] = pq_canvas[i] ? WHITE : BLACK;
     }
     else {
       warn = 1;

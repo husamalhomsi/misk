@@ -19,7 +19,7 @@ OPTIONS
     Defaults to 256. Must be less than or equal to 32768.
 
   -H
-    Create a horizontal projection as if by moving white pixels up and black
+    Create a horizontal projection as if by moving black pixels up and white
     pixels down.
 
   -l <length>
@@ -28,11 +28,11 @@ OPTIONS
 
   -s
     Reveal stalactites by flood-filling the top row with a filler color,
-    replacing white pixels with black, then replacing filler pixels with white.
+    replacing black pixels with white, then replacing filler pixels with black.
 
   -V
-    Create a vertical projection as if by moving white pixels to the left and
-    black pixels to the right.
+    Create a vertical projection as if by moving black pixels to the left and
+    white pixels to the right.
 
   -w <width>
     The positive integer <width> specifies the image's width in pixels.
