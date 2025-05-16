@@ -11,11 +11,7 @@
 #define GRID_COLS 3
 #define GRID_AREA 9
 
-#define RED_DISPLAY   31
-#define GREEN_DISPLAY 32
-
-#define RED_BACKGROUND   41
-#define GREEN_BACKGROUND 42
+#define NEGATIVE_IMAGE 7
 
 char grid[GRID_AREA] = {
   '1', '2', '3',
@@ -94,17 +90,16 @@ int main(void) {
       }
     }
 
-    printf(ECMA_48_CUP("%d;%d") ECMA_48_SGR("%d") "%c" ECMA_48_SGR(),
+    printf(ECMA_48_CUP("%d;%d") "%c",
       c / GRID_COLS * 2 + 1,
       c % GRID_COLS * 2 + 1,
-      player == 'X' ? RED_DISPLAY : GREEN_DISPLAY,
       player);
 
     grid[c] = player;
 
     if (++plays >= 5) {
-      do if ((grid[magic[c][0]] & grid[magic[c][1]] & grid[magic[c][2]]) == player) {
-        printf(ECMA_48_SGR("%d"), player == 'X' ? RED_BACKGROUND : GREEN_BACKGROUND);
+      do if (grid[magic[c][0]] == grid[magic[c][1]] && grid[magic[c][1]] == grid[magic[c][2]]) {
+        printf(ECMA_48_SGR("%d"), NEGATIVE_IMAGE);
 
         for (int i = 0; i < 3; ++i)
           printf(ECMA_48_CUP("%d;%d") "%c",
