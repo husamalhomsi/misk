@@ -32,6 +32,7 @@ cc $OPT -o eca-png   eca-png.c -lpng
 cc $OPT -o eca-txt   eca-txt.c
 cc $OPT -o eca-wav   eca-wav.c
 cc $OPT -o getlocale getlocale.c
+cc $OPT -o img2doc   img2doc.c -lcairo -I /usr/include/cairo
 cc $OPT -o limits    limits.c
 cc $OPT -o midi      midi.c -lm
 cc $OPT -o morse     morse.c
@@ -46,6 +47,6 @@ cc $OPT -o xy-png    xy-png.c -lpng
 
 echo "Moving programs"
 
-sudo mv ctime eca-png eca-txt eca-wav getlocale limits midi morse pq-fb pq-png pq-seq printable rainbow sumber ttt xy-png $BIN
+sudo mv ctime eca-png eca-txt eca-wav getlocale img2doc limits midi morse pq-fb pq-png pq-seq printable rainbow sumber ttt xy-png $BIN
 
 echo "Done"

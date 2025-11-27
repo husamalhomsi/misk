@@ -12,6 +12,7 @@ The programs and libraries in here are:
   eca.h     - library for elementary cellular automata
   ecma-48.h - control functions for coded character sets in 7-bit codes
   getlocale - print the current locale
+  img2doc   - embed an image in a document
   limits    - print every standard limit in <limits.h>
   midi      - print a table of MIDI note number, notation, and frequency
   morse     - print arguments as Morse code
