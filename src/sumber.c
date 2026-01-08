@@ -43,7 +43,8 @@ int main(void) {
   if (count < 2)
     return 3;
 
-  qsort(numbers, count, sizeof numbers[0], compare);
+  numbers = realloc(numbers, count * sizeof *numbers);
+  qsort(numbers, count, sizeof *numbers, compare);
 
   double min = numbers[0];
   double max = numbers[count - 1];
