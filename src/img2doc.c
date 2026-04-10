@@ -13,10 +13,10 @@ int main(int argc, char *argv[]) {
     return 1;
 
   double margin     = in2pt(0.5);
-  double img_width  = in2pt(10);
-  double img_height = in2pt(7.5);
-  double doc_width  = img_width  + 2 * margin;
-  double doc_height = img_height + 2 * margin;
+  double doc_width  = in2pt(11);
+  double doc_height = in2pt(8.5);
+  double img_width  = doc_width  - 2 * margin;
+  double img_height = doc_height - 2 * margin;
 
   const char *img_filename = argv[1];
   const char *doc_filename = argv[2];
