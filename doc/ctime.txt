@@ -1,5 +1,0 @@
-NAME
-  ctime - print the local time in the form Www Mmm dd hh:mm:ss yyyy
-
-SYNOPSIS
-  ctime
