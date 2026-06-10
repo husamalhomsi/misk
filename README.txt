@@ -14,7 +14,7 @@ The programs and libraries in here are:
   img2doc   - embed an image in a document
   limits    - print every standard limit in <limits.h>
   midi      - print a table of MIDI note number, notation, and frequency
-  morse     - print arguments as Morse code
+  morse     - translate arguments into Morse code
   pq-fb     - display PQ images on the Linux framebuffer device
   pq-png    - write a PQ image to a PNG file
   pq-seq    - write PQ q-sequences to text files
