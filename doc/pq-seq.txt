@@ -20,8 +20,8 @@ DESCRIPTION
     p32q127.pq-seq.txt
     p32q255.pq-seq.txt
 
-  The first four sequences are these sequences in the On-Line Encyclopedia of
-  Integer Sequences (OEIS):
+  The first four sequences correspond to the following sequences in the On-Line
+  Encyclopedia of Integer Sequences (OEIS):
 
     https://oeis.org/A020522
     https://oeis.org/A171476

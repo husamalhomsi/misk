@@ -27,7 +27,6 @@ echo "Compiling programs"
 
 OPT="-march=native -O3"
 
-cc $OPT -o ctime     ctime.c
 cc $OPT -o eca-png   eca-png.c -lpng
 cc $OPT -o eca-txt   eca-txt.c
 cc $OPT -o eca-wav   eca-wav.c
@@ -47,6 +46,6 @@ cc $OPT -o xy-png    xy-png.c -lpng
 
 echo "Moving programs"
 
-sudo mv ctime eca-png eca-txt eca-wav getlocale img2doc limits midi morse pq-fb pq-png pq-seq printable rainbow sumber ttt xy-png $BIN
+sudo mv eca-png eca-txt eca-wav getlocale img2doc limits midi morse pq-fb pq-png pq-seq printable rainbow sumber ttt xy-png $BIN
 
 echo "Done"

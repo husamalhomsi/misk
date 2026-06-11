@@ -5,8 +5,8 @@ SYNOPSIS
   sumber
 
 DESCRIPTION
-  sumber reads space-separated numbers then prints the following statistics with
-  up to 10 significant digits:
+  Read space-separated numbers then print the following statistics with up to 10
+  significant digits:
 
     Count
     Sum

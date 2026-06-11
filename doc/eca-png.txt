@@ -7,11 +7,11 @@ SYNOPSIS
 OPTIONS
   -c <cells>
     The positive integer <cells> specifies the number of cells in a generation.
-    Defaults to 256. Must be less than or equal to 32768.
+    Defaults to 512. Must be less than or equal to 32768.
 
   -g <generations>
     The positive integer <generations> specifies the number of generations.
-    Defaults to 128. Must be less than or equal to 32768.
+    Defaults to 256. Must be less than or equal to 32768.
 
   -r <rule>
     The nonnegative integer <rule> specifies the rule.

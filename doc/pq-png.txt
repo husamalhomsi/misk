@@ -6,13 +6,14 @@ SYNOPSIS
          [-w <width>] [-x <x-offset>] [-y <y-offset>] [-z]
 
 DESCRIPTION
-  PQ images are described at https://husamalhomsi.net/pq-images.
+  Write a PQ image to a 1-bit grayscale, non-interlaced PNG file.
 
-  pq-png writes a PQ image to a 1-bit grayscale, non-interlaced PNG file. The
-  file has a name that encodes how it was produced. For example, a file named
-  p0q1w256h256x0y0.pq.png can be reproduced by an invocation equivalent to
+  The file has a name that encodes how it was produced. For example, a file
+  named p0q1w256h256x0y0.pq.png can be produced by an invocation equivalent to:
 
     pq-png -p 0 -q 1 -w 256 -h 256 -x 0 -y 0
+
+  PQ images are described at https://husamalhomsi.net/pq-images.
 
 OPTIONS
   -h <height>

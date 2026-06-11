@@ -16,7 +16,8 @@ DESCRIPTION
   a space, and the signals for a word are followed by a newline.
 
   The program is based on International Morse code as defined in Recommendation
-  ITU-R M.1677-1 (https://www.itu.int/rec/R-REC-M.1677-1-200910-I/en).
+  ITU-R M.1677-1 (https://www.itu.int/rec/R-REC-M.1677-1-200910-I/en), but it is
+  not a complete implementation.
 
 NOTES
   Here are some performance observations based on unoptimized Intel 64 assembly

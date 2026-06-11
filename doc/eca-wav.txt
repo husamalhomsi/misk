@@ -1,33 +1,51 @@
 NAME
-  eca-wav - write an elementary cellular automaton as audio to a WAVE file
+  eca-wav - write an elementary cellular automaton to a WAVE file
 
 SYNOPSIS
   eca-wav [-c <cells>] [-g <generations>] [-r <rule>] [-s <seed>]
 
 DESCRIPTION
-  eca-wav generates generations of cells that evolve according to an elementary
-  cellular automata rule. The generations are concatenated and converted to an
-  audio stream. Dead cells become silence, and alive cells alternate up and down
-  between the maximum amplitudes. eca-wav writes the stream to a WAVE file. The
-  file has 1 channel, unsigned 8-bit samples, and 44100 samples per second.
-
-  Evolutions start from either a fixed state or a random state that is seeded
-  manually. The former tend to sound tonal, whereas the latter tend to sound
-  atonal. See the option -s.
+  Generate an elementary cellular automaton (which consists of generations of
+  cells), concatenate the generations, and convert them into audio. The audio
+  has a waveform where alive cells correspond to alternating peaks connected by
+  straight lines [1]. The audio is written to a WAVE file that has 1 channel,
+  unsigned 8-bit samples, and 44100 samples per second.
 
   The file has a name that encodes how it was produced. For example, a file
-  named r18s0c256g128.eca.wav can be reproduced by an invocation equivalent to
+  named r18s0c512g256.eca.wav can be produced by an invocation equivalent to:
 
-    eca-wav -r 18 -s 0 -c 256 -g 128
+    eca-wav -r 18 -s 0 -c 512 -g 256
+
+  The automaton begins from a fixed state or a random state. The former tends to
+  sound tonal, whereas the latter tends to sound atonal. See the option -s.
+
+  [1] To illustrate this, consider the following automaton, where A denotes an
+  alive cell and D denotes a dead cell:
+
+    DDA (Generation 1)
+    DDD (Generation 2)
+    ADD (Generation 3)
+
+  The generations are concatenated as follows:
+
+    DDADDDADD (Generation 1, then 2, then 3)
+
+  And converted into audio as follows:
+
+      A       +1.0 (Positive peak)
+     D D      +0.5
+    D   D   D  0.0 (Zero-crossing)
+         D D  -0.5
+          A   -1.0 (Negative peak)
 
 OPTIONS
   -c <cells>
     The positive integer <cells> specifies the number of cells in a generation.
-    Defaults to 256. Must be less than 4294967296.
+    Defaults to 512. Must be less than 4294967296.
 
   -g <generations>
     The positive integer <generations> specifies the number of generations.
-    Defaults to 128. Must be less than 4294967296.
+    Defaults to 256. Must be less than 4294967296.
 
   -r <rule>
     The nonnegative integer <rule> specifies the rule.

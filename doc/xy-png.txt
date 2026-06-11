@@ -5,13 +5,14 @@ SYNOPSIS
   xy-png [-h <height>] [-H] [-l <length>] [-s] [-V] [-w <width>] [-z]
 
 DESCRIPTION
-  XY images are described at https://husamalhomsi.net/xy-images.
+  Write an XY image to a 1-bit grayscale, non-interlaced PNG file.
 
-  xy-png writes an XY image to a 1-bit grayscale, non-interlaced PNG file. The
-  file has a name that encodes how it was produced. For example, a file named
-  w256h256s.xy.png can be reproduced by an invocation equivalent to
+  The file has a name that encodes how it was produced. For example, a file
+  named w256h256s.xy.png can be produced by an invocation equivalent to:
 
     xy-png -w 256 -h 256 -s
+
+  XY images are described at https://husamalhomsi.net/xy-images.
 
 OPTIONS
   -h <height>
